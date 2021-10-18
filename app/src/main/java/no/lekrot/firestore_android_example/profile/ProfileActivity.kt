@@ -15,7 +15,6 @@ import no.lekrot.firestore_android_example.domain.Checkin
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
-    private val viewModel: ProfileViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +35,8 @@ class ProfileActivity : AppCompatActivity() {
         }
         val adapter = UserAdapter(mutableListOf())
         binding.recycler.adapter = adapter
-        Firebase.firestore.collection("checkins").whereEqualTo("userId", userId)
+        Firebase.firestore.collection("checkins")
+            .whereEqualTo("userId", userId)
             .addSnapshotListener { collection, exception ->
                 if (collection == null) return@addSnapshotListener
                 val checkins = collection.documents.map { doc ->
