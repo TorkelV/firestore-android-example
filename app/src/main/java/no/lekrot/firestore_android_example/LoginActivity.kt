@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             }.addOnFailureListener {
                 Snackbar.make(
                     binding.root,
-                    "Klarte ikke opprette bruker.",
+                    "Could not create user.",
                     Snackbar.LENGTH_LONG
                 ).show()
             }

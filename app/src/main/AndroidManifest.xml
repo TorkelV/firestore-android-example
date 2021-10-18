@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firestoreandroidexample">
         <activity
+            android:name=".ProfileCreationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity

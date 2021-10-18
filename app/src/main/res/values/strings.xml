@@ -6,4 +6,8 @@
     <string name="login_create_button">Create user</string>
     <string name="login_login_button">Log in</string>
     <string name="login_forgot_pw_button">Forgot password</string>
+    <string name="create_title">Create profile</string>
+    <string name="create_name_hint">Name</string>
+    <string name="create_city_hint">City</string>
+    <string name="create_profile_button">Create profile</string>
 </resources>
