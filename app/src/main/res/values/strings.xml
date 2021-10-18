@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">firestore-android-example</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_title">Create user</string>
+    <string name="login_create_button">Create user</string>
+    <string name="login_login_button">Log in</string>
+    <string name="login_forgot_pw_button">Forgot password</string>
 </resources>
