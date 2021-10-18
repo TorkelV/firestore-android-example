@@ -11,12 +11,20 @@ import no.lekrot.firestore_android_example.profile.ProfileActivity
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val userId: String? = Firebase.auth.currentUser?.uid
         if (Firebase.auth.currentUser == null) {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         } else {
-            startActivity(Intent(this, ProfileCreationActivity::class.java))
-            finish()
+            Firebase.firestore.document("users/$userId").get().addOnSuccessListener { doc ->
+                if (doc.exists()) {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    finish()
+                } else {
+                    startActivity(Intent(this, ProfileCreationActivity::class.java))
+                    finish()
+                }
+            }
         }
     }
 }
