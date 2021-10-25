@@ -3,6 +3,7 @@
 A simple app to showcase Firebase auth and Firestore.
 
 Setup:
+
 0. Clone the project
 1. Change the applicationId in app/build.gradle to something unique to you.
 2. Go to https://console.firebase.google.com/
